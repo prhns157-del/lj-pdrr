@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/ferramenta", "destination": "/ferramenta/index.html" },
+    { "source": "/checkout", "destination": "/checkout/index.html" },
+    { "source": "/endereco", "destination": "/endereco/index.html" },
+    { "source": "/pix", "destination": "/pix/index.html" },
+    { "source": "/avaliacoes", "destination": "/avaliacoes/index.html" },
+    { "source": "/pedido-confirmado", "destination": "/pedido-confirmado/index.html" },
+    { "source": "/upsellkitferramentas", "destination": "/upsellkitferramentas/index.html" },
+    { "source": "/upsellkitferramentas-checkout", "destination": "/upsellkitferramentas-checkout/index.html" },
+    { "source": "/meus-pedidos", "destination": "/meus-pedidos/index.html" }
+  ]
+}

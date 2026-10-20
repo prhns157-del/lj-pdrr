@@ -1,0 +1,5 @@
+# Arquivos da versão cPanel: não sobem pra Vercel (ela não roda PHP e exporia as chaves do config.php)
+*.php
+.htaccess
+.env
+.env.*

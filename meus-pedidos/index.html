@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charSet="utf-8"/><script>
+(function(){
+  try{
+    var KEYS=["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid","ttclid","gclid"];
+    var TPL=/^(?:__[A-Z0-9_]+__|\{\{?[^}]+\}?\}|%[A-Z0-9_]+%|\$\{[^}]+\})$/i;
+    var params=new URLSearchParams(window.location.search);
+    var found={},has=false;
+    for(var i=0;i<KEYS.length;i++){
+      var k=KEYS[i],v=params.get(k);
+      if(v&&!TPL.test(v.trim())){found[k]=v;has=true;}
+    }
+    if(has){
+      if(!found.utm_source){
+        if(found.ttclid)found.utm_source="tiktok";
+        else if(found.fbclid)found.utm_source="facebook";
+        else if(found.gclid)found.utm_source="google";
+      }
+      if(!found.utm_medium&&(found.ttclid||found.fbclid||found.gclid))found.utm_medium="paid";
+      var json=JSON.stringify(found);
+      window.localStorage.setItem("tt:utm",json);
+      document.cookie="_ttatt="+encodeURIComponent(json)+"; Max-Age="+(3600*24*30)+"; Path=/; SameSite=Lax";
+    }
+  }catch(e){}
+})();
+</script><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/><link rel="stylesheet" href="/assets/styles-dGQVARyc.css" data-precedence="default"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" data-precedence="default"/><script src="https://www.googletagmanager.com/gtag/js?id=G-RXJJYPE0WZ" async=""></script><title>Meus Pedidos | TikTok Shop</title><style>
+@keyframes tk-ping{75%,100%{transform:scale(2.4);opacity:0}}
+@keyframes tk-dot-glow{0%,100%{box-shadow:0 0 0 0 rgba(254,44,85,0.45)}50%{box-shadow:0 0 0 6px rgba(254,44,85,0)}}
+.tk-ping{animation:tk-ping 1.6s cubic-bezier(0,0,0.2,1) infinite}
+.tk-dot{animation:tk-dot-glow 1.6s cubic-bezier(0,0,0.2,1) infinite}
+.tk-letter{display:inline-block;color:#161823;transform:scale(1);animation:tk-letter-pop 4.2s ease-in-out infinite}
+@keyframes tk-letter-pop{0%{color:#161823;transform:scale(1)}8%{color:#25f4ee;transform:scale(1.1)}18%{color:#fe2c55;transform:scale(1.28)}30%{color:#fe2c55;transform:scale(1.12)}40%{color:#161823;transform:scale(1)}100%{color:#161823;transform:scale(1)}}
+</style><meta name="theme-color" content="#ffffff"/><meta name="robots" content="noindex"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="icon" href="/favicon.png" type="image/png"/><script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-RXJJYPE0WZ');
+        </script>
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+  ttq.load('DAIARBRC77U3EU7G889G');
+  ttq.page();
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+</head><body><div class="min-h-screen w-full bg-[#e5e5e7]"><div class="mx-auto min-h-screen w-full max-w-[440px] bg-white shadow-[0_0_40px_rgba(0,0,0,0.08)]"><div class="min-h-screen bg-[#f5f5f5] pb-24">
+
+<div class="sticky top-0 z-30 bg-white"><div class="relative flex h-11 items-center px-2"><a href="/pedido-confirmado" id="back-link" aria-label="Voltar" class="grid h-9 w-9 place-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="h-[22px] w-[22px] text-[#161823]"><path d="m15 18-6-6 6-6"></path></svg></a><div class="pointer-events-none absolute left-1/2 -translate-x-1/2 text-[15px] font-semibold text-[#161823]">Meus Pedidos</div></div><div class="h-px bg-[#f0f0f0]"></div></div>
+<div class="h-[4px] overflow-hidden bg-white" aria-hidden="true"><svg width="100%" height="4" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="tt-ribbon-pedidos" x="0" y="0" width="64" height="4" patternUnits="userSpaceOnUse"><rect x="2" y="0.75" width="26" height="2.5" rx="0.5" fill="#25f4ee" transform="skewX(-20)"></rect><rect x="34" y="0.75" width="26" height="2.5" rx="0.5" fill="#fe2c55" transform="skewX(-20)"></rect></pattern></defs><rect width="100%" height="4" fill="url(#tt-ribbon-pedidos)"></rect></svg></div>
+
+<div id="order-card" class="mx-4 mt-4 rounded-2xl bg-white p-4 shadow-[0_2px_14px_rgba(0,0,0,0.06)] ring-1 ring-[#eef0f2]">
+  <div class="flex items-center justify-between">
+    <div class="text-[14px] font-bold text-[#fe2c55]">Detalhes do Pedido</div>
+    <span class="rounded-full bg-[#e7f7f5] px-2.5 py-1 text-[11px] font-semibold text-[#00b8a9]">Pix · Aprovado</span>
+  </div>
+  <div class="mt-1.5 text-[12px] text-[#8a8b91]">Pedido <span id="order-id" class="font-mono font-semibold text-[#161823]">—</span></div>
+  <div class="my-3 h-px bg-[#f0f0f0]"></div>
+  <div class="flex gap-3">
+    <img src="/promotiktok.b-cdn.net/media/3a6e2019-320a-446d-9306-bb7daebf9e01/header-1.webp" class="h-16 w-16 shrink-0 rounded-md object-cover" alt=""/>
+    <div class="min-w-0 flex-1">
+      <div id="order-title" class="line-clamp-3 text-[13.5px] leading-[1.35] text-[#161823]">[SOARFLY] Kit Ferramentas 4 em 1 48Vf | Íon Lítio Baterias Sem Fio | Furadeira, Chave de Impacto, Serra Alternativa e Serra Circular</div>
+      <div class="mt-1 text-[12px] text-[#8a8b91]">Qtd: <span id="order-qty">1</span></div>
+    </div>
+    <div id="order-total" class="shrink-0 text-[14px] font-bold text-[#fe2c55]">R$ 67,90</div>
+  </div>
+</div>
+
+<div id="address-card" class="mx-4 mt-3 rounded-2xl bg-white p-4 shadow-[0_2px_14px_rgba(0,0,0,0.06)] ring-1 ring-[#eef0f2]" hidden>
+  <div class="text-[14px] font-bold text-[#fe2c55]">Endereço de Entrega</div>
+  <div id="address-name" class="mt-2 text-[13.5px] font-semibold text-[#161823]"></div>
+  <div id="address-lines" class="mt-1 text-[13px] text-[#5a5b60]"></div>
+</div>
+
+<div class="mx-4 mt-3 flex items-center gap-3 rounded-2xl bg-white p-4 shadow-[0_2px_14px_rgba(0,0,0,0.06)] ring-1 ring-[#eef0f2]">
+  <span class="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#fff0f3]">
+    <span class="tk-ping absolute inline-flex h-3.5 w-3.5 rounded-full bg-[#fe2c55] opacity-75"></span>
+    <span class="tk-dot relative inline-flex h-2.5 w-2.5 rounded-full bg-[#fe2c55]"></span>
+  </span>
+  <div class="min-w-0 flex-1 self-center">
+    <div id="status-title" class="text-[13.5px] font-semibold leading-tight text-[#161823]">Seu pedido está sendo preparado</div>
+    <div id="status-subtext" class="mt-1 truncate text-[12px] leading-snug text-[#8a8b91]">Pedido em processamento no centro de distribuição. Você será notificado por e-mail a cada atualização de status.</div>
+  </div>
+  <button id="status-toggle" type="button" aria-expanded="false" aria-label="Ver mais" class="shrink-0 self-center rounded-full p-1">
+    <svg id="status-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 text-[#c8c8cc] transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+  </button>
+</div>
+
+<div id="empty-state" class="mx-4 mt-10 text-center text-[13.5px] text-[#8a8b91]" hidden>Nenhum pedido encontrado neste navegador.</div>
+
+<div class="mt-6 px-4"><a href="/upsellkitferramentas" id="continue-link" class="block w-full rounded-full bg-[#fe2c55] py-3 text-center text-[15px] font-semibold text-white shadow-[0_6px_18px_rgba(37,227,155,0.35)]">Continuar Comprando</a></div>
+
+</div></div></div>
+<script>
+(function(){
+  var el=document.getElementById("status-title");
+  if(!el)return;
+  var text=el.textContent;
+  el.textContent="";
+  for(var i=0;i<text.length;i++){
+    var ch=text[i];
+    var span=document.createElement("span");
+    span.className="tk-letter";
+    span.style.animationDelay=(i*0.07)+"s";
+    span.textContent=ch===" "?" ":ch;
+    el.appendChild(span);
+  }
+})();
+</script>
+<script>
+(function(){
+  var link=document.getElementById("continue-link");
+  if(link&&window.location.search)link.href="/upsellkitferramentas"+window.location.search;
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById("status-toggle");
+  var subtext=document.getElementById("status-subtext");
+  var chevron=document.getElementById("status-chevron");
+  if(!btn||!subtext)return;
+  btn.addEventListener("click",function(){
+    var expanded=btn.getAttribute("aria-expanded")==="true";
+    btn.setAttribute("aria-expanded",String(!expanded));
+    subtext.classList.toggle("truncate",expanded);
+    if(chevron)chevron.style.transform=expanded?"":"rotate(180deg)";
+  });
+})();
+</script><script>
+(function(){
+  try{
+    var raw=window.localStorage.getItem("tiktokshop:order");
+    var o=raw?JSON.parse(raw):null;
+
+    // Fonte principal: o número que veio na própria URL (link enviado por /pedido-confirmado).
+    // Isso sobrevive mesmo se o localStorage tiver sido perdido no meio do caminho.
+    var urlOrderId=new URLSearchParams(window.location.search).get("pedido");
+    var orderId=urlOrderId||(o&&o.paidInvoiceId?("TK"+String(o.paidInvoiceId).replace(/[^0-9A-Za-z]/g,"")):null);
+
+    if(!orderId){
+      document.getElementById("order-card").hidden=true;
+      document.getElementById("empty-state").hidden=false;
+      return;
+    }
+
+    // Mantém o número do pedido no link de voltar, pra não se perder se o
+    // localStorage falhar na volta pro /pedido-confirmado.
+    var backLink=document.getElementById("back-link");
+    if(backLink)backLink.href="/pedido-confirmado?pedido="+encodeURIComponent(orderId);
+
+    // Detalhes (produto/qtd/total/endereço) vêm do localStorage quando disponível.
+    // O produto desse funil é sempre o mesmo, então na ausência do localStorage
+    // mostramos os valores padrão em vez de deixar a tela quebrada.
+    var qty=(o&&o.qty)||1;
+    var price=(o&&o.productPrice!=null)?o.productPrice:67.9;
+    var total=(price*qty).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});
+
+    document.getElementById("order-id").textContent="#"+orderId;
+    document.getElementById("order-qty").textContent=qty;
+    document.getElementById("order-total").textContent="R$ "+total;
+    if(o&&o.productTitle){document.getElementById("order-title").textContent=o.productTitle;}
+    if(o&&o.address){
+      var a=o.address;
+      document.getElementById("address-card").hidden=false;
+      document.getElementById("address-name").textContent=(a.nome||"Destinatário")+(a.telefone?", "+a.telefone:"");
+      var parts=[a.endereco,a.numero,a.bairro,a.cidade,a.estado,a.cep].filter(Boolean);
+      document.getElementById("address-lines").textContent=parts.join(", ");
+    }
+  }catch(e){
+    document.getElementById("order-card").hidden=true;
+    document.getElementById("empty-state").hidden=false;
+  }
+})();
+</script>
+</body></html>

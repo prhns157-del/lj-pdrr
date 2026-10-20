@@ -1,0 +1,33 @@
+Options -Indexes -MultiViews
+DirectoryIndex index.html index.php
+# Sem isso o servidor redireciona /checkout -> /checkout/ (com barra) e o roteador da página não reconhece.
+DirectorySlash Off
+
+RewriteEngine On
+
+# Validação do SSL grátis (AutoSSL) do cPanel: não mexer
+RewriteRule ^\.well-known/ - [L]
+
+# Força HTTPS
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# API: /api/flevopay-create -> api/flevopay-create.php (mesma URL que era na Vercel)
+RewriteRule ^api/(flevopay-(?:create|status|webhook))/?$ api/$1.php [L,QSA]
+
+# /ferramenta, /checkout, /upsells/1 etc. -> pasta/index.html, sem mudar a URL
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.+?)/?$ $1/index.html [L]
+
+# Arquivos que não devem ficar públicos
+RewriteRule (^|/)\. - [F]
+RewriteRule ^vercel\.json$ - [F]
+
+# Mesmo cache da Vercel: o navegador sempre revalida, então mudança de preço/página aparece na hora.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|js|css|json)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
